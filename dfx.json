@@ -1,37 +1,36 @@
 {
-  "canisters": {
-    "internet_identity": {
-      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
-      "frontend": {},
-      "remote": {
-        "id": {
-          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+    "canisters": {
+        "internet_identity": {
+            "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+            "frontend": {},
+            "remote": {
+                "id": {
+                    "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+                }
+            },
+            "type": "custom",
+            "specified_id": "rdmx6-jaaaa-aaaaa-aaadq-cai",
+            "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+        },
+        "backend": {
+            "main": "backend/app.mo",
+            "type": "motoko"
+        },
+        "frontend": {
+            "dependencies": ["backend"],
+            "source": ["frontend/dist"],
+            "frontend": {
+                "entrypoint": "frontend/index.html"
+            },
+            "type": "assets"
         }
-      },
-      "type": "custom",
-      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
     },
-    "ninja-nft-motoko-backend": {
-      "main": "src/ninja-nft-motoko-backend/main.mo",
-      "type": "motoko"
+    "defaults": {
+        "build": {
+            "args": "",
+            "packtool": ""
+        }
     },
-    "ninja-nft-motoko-frontend": {
-      "dependencies": [
-        "ninja-nft-motoko-backend"
-      ],
-      "source": [
-        "src/ninja-nft-motoko-frontend/dist"
-      ],
-      "type": "assets",
-      "workspace": "ninja-nft-motoko-frontend"
-    }
-  },
-  "defaults": {
-    "build": {
-      "args": "",
-      "packtool": ""
-    }
-  },
-  "output_env_file": ".env",
-  "version": 1
+    "output_env_file": ".env",
+    "version": 1
 }

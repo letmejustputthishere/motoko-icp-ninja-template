@@ -36,7 +36,7 @@ Once the job completes, your application will be available at `http://localhost:
 If you have made changes to your backend canister, you can generate a new candid interface with
 
 ```bash
-npm run generate
+npm run prebuild 
 ```
 
 at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
@@ -44,10 +44,10 @@ at any time. This is recommended before starting the frontend development server
 If you are making frontend changes, you can start a development server with
 
 ```bash
-npm start
+npm run dev
 ```
 
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
+Which will start a server at `http://localhost:3000`, proxying API requests to the replica at port 4943.
 
 ### Note on frontend environment variables
 

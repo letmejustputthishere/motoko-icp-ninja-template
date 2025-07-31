@@ -17,8 +17,12 @@
             "type": "motoko"
         },
         "frontend": {
-            "dependencies": ["backend"],
-            "source": ["frontend/dist"],
+            "dependencies": [
+                "backend"
+            ],
+            "source": [
+                "frontend/dist"
+            ],
             "frontend": {
                 "entrypoint": "frontend/index.html"
             },
@@ -28,7 +32,7 @@
     "defaults": {
         "build": {
             "args": "",
-            "packtool": ""
+            "packtool": "mops sources"
         }
     },
     "output_env_file": ".env",

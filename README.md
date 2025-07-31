@@ -47,7 +47,7 @@ If you are making frontend changes, you can start a development server with
 npm run dev
 ```
 
-Which will start a server at `http://localhost:3000`, proxying API requests to the replica at port 4943.
+Which will start a server at `http://127.0.0.1:5173/`, proxying API requests to the replica at port 4943.
 
 ### Note on frontend environment variables
 
